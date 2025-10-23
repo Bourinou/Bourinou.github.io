@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimitri PAPE - Portfolio</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Bourinou</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#skills" class="nav-link">Compétences</a></li>
+                <li><a href="#education" class="nav-link">Formation</a></li>
+                <li><a href="#experience" class="nav-link">Expériences</a></li>
+                <li><a href="#interests" class="nav-link">Passions</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Hero -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-name">Dimitri PAPE</h1>
+                <div class="hero-details">
+                    <p class="hero-age">19 ans</p>
+                    <p class="hero-title">Étudiant en BUT Informatique</p>
+                    <p class="hero-subtitle">Passionné de développement web et de technologies innovantes</p>
+                    <p class="hero-location"><i class="fas fa-map-marker-alt"></i> 125 avenue Augustin Fliche, 34090 Montpellier</p>
+                </div>
+                <div class="hero-cta">
+                    <a href="#about" class="cta-button">Découvrir mon profil</a>
+                    <a href="#contact" class="cta-button cta-secondary">Me contacter</a>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="floating-element" style="--delay: 0s;">💻</div>
+                <div class="floating-element" style="--delay: 1s;">🎨</div>
+                <div class="floating-element" style="--delay: 2s;">🚀</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section À propos -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">À propos de moi</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">Passionné d'informatique, étudiant en 2ème année de BUT informatique à l'IUT de Montpellier. Je travaille sur de nombreux projets en équipe et suis particulièrement intéressé par la VR et l'AR.</p>
+                    <p class="about-description">Ayant pratiqué diverses activités (judo, équitation, moto cross, natation, escalade, piano), je suis rigoureux, autonome et motivé dans tout ce que j'entreprends.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Compétences -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title">Mes Compétences</h2>
+            <div class="skills-grid">
+                <div class="skill-card" data-delay="0">
+                    <div class="skill-icon">💻</div>
+                    <h3>Versioning et Collaboration</h3>
+                    <p>Maîtrise des outils de versioning et collaboration (Git, GitHub)</p>
+                </div>
+                <div class="skill-card" data-delay="100">
+                    <div class="skill-icon">🗄️</div>
+                    <h3>Bases de Données</h3>
+                    <p>Conception et gestion de bases de données (SQL, PostgreSQL)</p>
+                </div>
+                <div class="skill-card" data-delay="200">
+                    <div class="skill-icon">⚙️</div>
+                    <h3>Programmation Objet</h3>
+                    <p>Programmation orientée objet et développement d'applications (Java, JavaFX)</p>
+                </div>
+                <div class="skill-card" data-delay="300">
+                    <div class="skill-icon">🎨</div>
+                    <h3>Développement Front-end</h3>
+                    <p>Développement front-end et interfaces utilisateur (HTML, CSS, JavaScript, Bootstrap)</p>
+                </div>
+                <div class="skill-card" data-delay="400">
+                    <div class="skill-icon">🔗</div>
+                    <h3>Développement Back-end</h3>
+                    <p>Connexion web et développement back-end (PHP, MySQL)</p>
+                </div>
+                <div class="skill-card" data-delay="500">
+                    <div class="skill-icon">💬</div>
+                    <h3>Communication</h3>
+                    <p>Communication technique et professionnelle</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Formation -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Ma Formation</h2>
+            <div class="education-timeline">
+                <div class="timeline-item" data-delay="0">
+                    <div class="timeline-date">2024 - 2027</div>
+                    <div class="timeline-content">
+                        <h3>BUT Informatique</h3>
+                        <p class="institution">IUT de Montpellier</p>
+                        <p>Formation complète en informatique couvrant le développement logiciel, les bases de données, les réseaux et la gestion de projet.</p>
+                    </div>
+                </div>
+                <div class="timeline-item" data-delay="200">
+                    <div class="timeline-date">2021 - 2024</div>
+                    <div class="timeline-content">
+                        <h3>Baccalauréat Général</h3>
+                        <p class="institution">Lycée</p>
+                        <p>Spécialités Mathématiques et Numérique &amp; Sciences Informatiques (NSI)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Expériences -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <h2 class="section-title">Mes Expériences</h2>
+            <div class="experience-grid">
+                <div class="experience-card featured" data-delay="0">
+                    <div class="featured-badge">⭐</div>
+                    <h3>Nuit de l'Info</h3>
+                    <p class="period">5-6 Décembre 2024</p>
+                    <p class="description">
+                        Participation à la Nuit de l'Info, un hackathon national de développement web de 12 heures. Travail en équipe sur un projet web avec des technologies modernes.
+                        <a href="https://ndi.faceoff.watch">
+                            Lien vers le site réalisé.
+                        </a>
+                    </p>
+                    <div class="tags">
+                        <span class="tag">Hackathon</span>
+                        <span class="tag">Travail d'équipe</span>
+                        <span class="tag">Web</span>
+                    </div>
+                </div>
+                <div class="experience-card" data-delay="200">
+                    <h3>Jeu de Cartes Pokémon</h3>
+                    <p class="period">2024</p>
+                    <p class="description">Développement complet d'un jeu de cartes Pokémon en JavaFX. Implémentation de la logique de jeu, interface utilisateur interactive et gestion des événements.</p>
+                    <div class="tags">
+                        <span class="tag">Java</span>
+                        <span class="tag">JavaFX</span>
+                        <span class="tag">POO</span>
+                    </div>
+                </div>
+                <div class="experience-card" data-delay="400">
+                    <h3>Site Web Escape Game</h3>
+                    <p class="period">2024</p>
+                    <p class="description">Création d'un site web statique pour un Escape Game avec une interface immersive et responsive utilisant HTML5 et CSS3.</p>
+                    <div class="tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Centres d'intérêt -->
+    <section class="interests" id="interests">
+        <div class="container">
+            <h2 class="section-title">Mes Passions</h2>
+            <div class="interests-grid">
+                <div class="interest-card" data-delay="0">
+                    <div class="interest-icon">⛰️</div>
+                    <h3>Randonnée</h3>
+                    <p>Exploration des paysages et déconnexion numérique</p>
+                </div>
+                <div class="interest-card" data-delay="100">
+                    <div class="interest-icon">🖥️</div>
+                    <h3>PC Building</h3>
+                    <p>Assemblage et optimisation de configurations</p>
+                </div>
+                <div class="interest-card" data-delay="200">
+                    <div class="interest-icon">🍳</div>
+                    <h3>Cuisine</h3>
+                    <p>Créativité culinaire et découverte de saveurs</p>
+                </div>
+                <div class="interest-card" data-delay="300">
+                    <div class="interest-icon">🥽</div>
+                    <h3>VR/AR</h3>
+                    <p>Technologies immersives et expériences VR/AR</p>
+                </div>
+                <div class="interest-card" data-delay="400">
+                    <div class="interest-icon">🎤</div>
+                    <h3>Vocaloids</h3>
+                    <p>Passionné par l'univers des Vocaloids, notamment Hatsune Miku, et la musique synthétique japonaise</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Contact -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Me Contacter</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item" data-delay="0">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Email</h4>
+                            <a href="mailto:dimitripape1@gmail.com">dimitripape1@gmail.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-delay="100">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Téléphone</h4>
+                            <a href="tel:+33775773745">+33 7 75 77 37 45</a>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-delay="200">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>Adresse</h4>
+                            <p>125 avenue Augustin Fliche<br>34090 Montpellier</p>
+                        </div>
+                    </div>
+                    <div class="contact-item" data-delay="300">
+                        <div class="contact-icon">
+                            <i class="fas fa-download"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>CV</h4>
+                            <a href="#" class="cv-download" onclick="alert('Flemme on verra plus tard')">Télécharger mon CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Dimitri PAPE. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
