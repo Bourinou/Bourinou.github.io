@@ -19,76 +19,16 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Effet de scroll sur la navbar
-    window.addEventListener('scroll', function() {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
-
-    // Smooth scrolling pour les liens d'ancrage
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                target.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start'
-                });
-            }
-        });
-    });
-
-    // Animations au scroll avec Intersection Observer
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                
-                // Animation avec délai pour les cartes
-                if (entry.target.hasAttribute('data-delay')) {
-                    const delay = entry.target.getAttribute('data-delay');
-                    entry.target.style.animationDelay = delay + 'ms';
-                }
-            }
-        });
-    }, observerOptions);
-
-    // Observer tous les éléments à animer
-    const elementsToAnimate = document.querySelectorAll(
-        '.skill-card, .timeline-item, .experience-card, .interest-card, .contact-item'
-    );
-    
-    elementsToAnimate.forEach((el, index) => {
-        // Ajouter les classes d'animation
-        el.classList.add('fade-in');
-        
-        // Ajouter un délai basé sur l'index pour un effet en cascade
-        if (!el.hasAttribute('data-delay')) {
-            el.setAttribute('data-delay', index * 100);
-        }
-        
-        observer.observe(el);
-    });
-
     // Animation spéciale pour le titre principal
     const heroName = document.querySelector('.hero-name');
     if (heroName) {
         // Ajouter l'attribut data-text pour l'effet de texte
         heroName.setAttribute('data-text', heroName.textContent);
-        
+
         // Animation d'écriture du nom
         const originalText = heroName.textContent;
         heroName.textContent = '';
-        
+
         let i = 0;
         const typeWriter = setInterval(() => {
             if (i < originalText.length) {
@@ -99,14 +39,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }, 100);
     }
-
-
-    // Animation des éléments flottants
-    const floatingElements = document.querySelectorAll('.floating-element');
-    floatingElements.forEach((element, index) => {
-        // Animation continue avec des paramètres différents
-        element.style.setProperty('--delay', index * 2 + 's');
-    });
 
     // Effet de hover amélioré pour les cartes
     const cards = document.querySelectorAll('.skill-card, .experience-card, .interest-card, .contact-item');
@@ -125,13 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animation des icônes au survol
     const skillIcons = document.querySelectorAll('.skill-icon, .interest-icon');
-    
+
     skillIcons.forEach(icon => {
         icon.addEventListener('mouseenter', function() {
             this.style.transform = 'scale(1.2) rotate(10deg)';
             this.style.transition = 'all 0.3s ease';
         });
-        
+
         icon.addEventListener('mouseleave', function() {
             this.style.transform = 'scale(1) rotate(0deg)';
         });
@@ -164,7 +96,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Animation d'apparition progressive des sections
     const sections = document.querySelectorAll('section');
-    
+
     const sectionObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -173,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }, {
-        threshold: 0.1
+        threshold: 0.05
     });
 
     sections.forEach(section => {
@@ -183,45 +115,7 @@ document.addEventListener('DOMContentLoaded', function() {
         sectionObserver.observe(section);
     });
 
-    // Effet de typing pour certains textes
-    function typeWriter(element, text, speed = 50) {
-        let i = 0;
-        element.innerHTML = '';
-        
-        function type() {
-            if (i < text.length) {
-                element.innerHTML += text.charAt(i);
-                i++;
-                setTimeout(type, speed);
-            }
-        }
-        
-        type();
-    }
 
-    // Gestionnaire d'événements pour les liens de navigation actifs
-    window.addEventListener('scroll', function() {
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-        
-        let current = '';
-        
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop;
-            const sectionHeight = section.clientHeight;
-            
-            if (scrollY >= (sectionTop - 200)) {
-                current = section.getAttribute('id');
-            }
-        });
-        
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href').substring(1) === current) {
-                link.classList.add('active');
-            }
-        });
-    });
 
     // Animation de chargement de la page
     window.addEventListener('load', function() {
@@ -236,15 +130,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }, index * 200);
         });
     });
-
-    // Performance: Réduire les animations sur les appareils moins puissants
-    if (window.devicePixelRatio > 2 || navigator.hardwareConcurrency < 4) {
-        document.documentElement.style.setProperty('--transition', 'all 0.2s ease');
-    }
-
-    console.log('🎨 Portfolio de Dimitri PAPE chargé avec succès!');
-    console.log('✨ Animations et interactions activées');
-    console.log('🌟 Thème Miku/Femboy appliqué');
 });
 
 // Styles CSS pour l'effet ripple (à ajouter dynamiquement)
@@ -285,3 +170,41 @@ const rippleStyles = `
 const styleSheet = document.createElement('style');
 styleSheet.textContent = rippleStyles;
 document.head.appendChild(styleSheet);
+
+const floatingElements = document.querySelectorAll('.floating-element');
+const minSize = 40;
+
+floatingElements.forEach((el, i) => {
+    let areaW = window.innerWidth;
+    let areaH = window.innerHeight;
+
+    // positions et directions aléatoires
+    let x = Math.random() * (areaW - minSize);
+    let y = Math.random() * (areaH - minSize);
+    let dx = (Math.random() > 0.5 ? 1 : -1) * (0.5 + Math.random());
+    let dy = (Math.random() > 0.5 ? 1 : -1) * (0.5 + Math.random());
+    let rotation = Math.random() * 360;
+    let rotateSpeed = (0.5 + Math.random() * 1.5); // degrés à chaque itération
+
+    el.style.top = `${y}px`;
+    el.style.left = `${x}px`;
+
+    function move() {
+        areaW = window.innerWidth;
+        areaH = window.innerHeight;
+
+        x += dx;
+        y += dy;
+        rotation += rotateSpeed;
+
+        // Rebonds
+        if (x < 0 || x > areaW - minSize) dx *= -1;
+        if (y < 0 || y > areaH - minSize) dy *= -1;
+
+        el.style.top = `${y}px`;
+        el.style.left = `${x}px`;
+        el.style.transform = `rotate(${rotation}deg)`;
+    }
+
+    setInterval(move, 20 + Math.random()*20);
+});
