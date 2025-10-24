@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b876136e-2644-4b31-b0c8-e5fa71aae124" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,8 +48,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-PS-252.26830.95" />
-        <option value="bundled-php-predefined-a98d8de5180a-9b563d34894c-com.jetbrains.php.sharedIndexes-PS-252.26830.95" />
+        <option value="bundled-js-predefined-d6986cc7102b-b598e85cdad2-JavaScript-PS-252.25557.128" />
+        <option value="bundled-php-predefined-a98d8de5180a-ce40d0652d34-com.jetbrains.php.sharedIndexes-PS-252.25557.128" />
       </set>
     </attachedChunks>
   </component>
@@ -66,6 +67,9 @@
       <workItem from="1761239247321" duration="237000" />
       <workItem from="1761239505196" duration="59000" />
       <workItem from="1761239772857" duration="322000" />
+      <workItem from="1761240123682" duration="698000" />
+      <workItem from="1761244444055" duration="18000" />
+      <workItem from="1761287627057" duration="653000" />
     </task>
     <servers />
   </component>
