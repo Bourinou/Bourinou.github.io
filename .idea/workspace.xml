@@ -33,6 +33,7 @@
     &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
@@ -69,6 +70,8 @@
       <workItem from="1761240123682" duration="698000" />
       <workItem from="1761244444055" duration="18000" />
       <workItem from="1761287627057" duration="3951000" />
+      <workItem from="1761306728253" duration="414000" />
+      <workItem from="1761308236429" duration="21000" />
     </task>
     <servers />
   </component>
