@@ -652,11 +652,6 @@ body.loaded .hero-cta {
     transition: var(--transition);
 }
 
-.contact-details a:hover {
-    color: var(--rose-primaire);
-}
-
-
 .footer {
     background: rgba(255, 255, 255, 0.8);
     padding: 2rem 0;
@@ -716,7 +711,6 @@ body.loaded .hero-cta {
     padding: 1.2rem 3rem;
     margin-bottom: 2rem;
     background: var(--rose-primaire);
-    color: white;
     box-shadow: var(--ombre-moyenne);
 }
 
