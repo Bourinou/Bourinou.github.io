@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Jeu de Cartes Pokémon - Bourinou</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+          rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <div class="nav-logo">
+            <span class="logo-text">Bourinou</span>
+        </div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a class="nav-link" href="index.html#home">Accueil</a></li>
+            <li><a class="nav-link" href="index.html#about">À propos</a></li>
+            <li><a class="nav-link" href="index.html#skills">Compétences</a></li>
+            <li><a class="nav-link" href="index.html#education">Formation</a></li>
+            <li><a class="nav-link" href="index.html#projet">Projets</a></li>
+            <li><a class="nav-link" href="index.html#interests">Passions</a></li>
+            <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<main>
+    <section class="projet">
+        <h2 class="section-title">Jeu de Cartes Pokémon</h2>
+        <p class="period">2024</p>
+        <div class="about-content">
+            <div class="project-details">
+                <div class="content-section">
+                    <h3>🎮 Un Duel Stratégique</h3>
+                    <p class="about-description">
+                        Ce projet a pour but de recréer l'expérience captivante du célèbre jeu de cartes Pokémon
+                        dans une version numérique interactive.
+                        L'objectif était de concevoir une application ludique où deux joueurs peuvent s'affronter,
+                        déployer leurs stratégies et gérer leurs ressources (énergie, cartes) pour remporter la
+                        victoire.
+                        Au-delà du code, c'est avant tout un travail de game design : penser l'interface pour
+                        qu'elle soit intuitive, fluide et fidèle à l'esprit du jeu original.
+                        L'immersion est renforcée par une interface graphique soignée utilisant JavaFX, rendant
+                        chaque action (attaque, pioche) visuellement satisfaisante.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>⚡ Moteur de Jeu & JavaFX</h3>
+                    <p class="about-description">
+                        J'ai implémenté un moteur de jeu complet à partir d'une base donnée respectant les règles
+                        officielles simplifiées :
+                        gestion des tours, calcul des dégâts selon les types (Eau, Feu, Plante, etc.), et conditions
+                        de victoire.
+                        L'interface propose une visualisation claire du plateau de jeu, avec les mains des joueurs,
+                        la zone de combat, les énergies et les cartes Pokémon.
+                        La gestion des événements utilisateurs a demandé une logique
+                        précise pour éviter les actions illégales durant le tour adverse ou les erreurs.
+                    </p>
+                </div>
+
+                <div class="content-section">
+                    <h3>🏆 Architecture & Programmation Objet</h3>
+                    <p class="about-description">
+                        Développé entièrement en Java, ce projet a été le terrain de jeu idéal pour mettre en
+                        pratique les concepts avancés de la Programmation Orientée Objet (POO).
+                        L'architecture repose sur une utilisation intensive de l'héritage et du polymorphisme pour
+                        gérer les différents types de cartes (Pokémon, Énergie, Dresseur) et leurs spécificités.
+                        La rigueur du typage fort de Java a permis de construire un système robuste, capable de
+                        gérer les règles complexes d'un jeu de cartes sans effets de bord inattendus.
+                        C'est une réalisation qui m'a fait progresser significativement dans la conception
+                        logicielle et la compréhension des mécanismes profonds du langage.
+                    </p>
+                </div>
+
+                <ul class="projet-list">
+                    <li>Moteur de jeu inspiré des règles Pokémon</li>
+                    <li>Gestion des cartes, points de vie, effets et attaques</li>
+                    <li>Interface graphique moderne et interactive</li>
+                </ul>
+            </div>
+
+            <div class="project-gallery">
+                <div class="gallery-item">
+                    <img alt="Interface de connexion du jeu Pokémon" loading="lazy" src="img/pokemon_accueil.jpg">
+                    <div class="gallery-caption">Écran d'accueil et connexion</div>
+                </div>
+                <div class="gallery-item">
+                    <img alt="Plateau de jeu Pokémon en combat" loading="lazy" src="img/pokemon_plateau.png">
+                    <div class="gallery-caption">Plateau de jeu interactif</div>
+                </div>
+            </div>
+        </div>
+        <div class="tags">
+            <span class="tag">Java</span>
+            <span class="tag">JavaFX</span>
+            <span class="tag">Jeu</span>
+        </div>
+    </section>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <p>&copy; 2025 Dimitri PAPE. Tous droits réservés.</p>
+    </div>
+</footer>
+<script src="./js/script.js"></script>
+</body>
+
+</html>
