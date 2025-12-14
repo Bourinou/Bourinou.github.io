@@ -470,6 +470,7 @@ body.loaded .hero-cta {
     align-items: center;
     margin-bottom: 3rem;
     position: relative;
+    gap: 2rem;
 }
 
 .timeline-item::before {
@@ -517,6 +518,10 @@ body.loaded .hero-cta {
     border: 2px solid var(--rose-primaire);
     box-shadow: var(--ombre-lourde);
     transform: scale(1.02);
+}
+
+.projet-card.featured:hover {
+    transform: translateY(-10px) scale(1.02);
 }
 
 
