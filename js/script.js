@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initialiserElementsFlottants();
     initialiserLightbox();
     initialiserAge();
+    initialiserTransitions();
 });
 
 function initialiserAge() {
@@ -95,7 +96,7 @@ function initialiserApparitionScroll() {
                 entree.target.style.transform = 'translateY(0)';
             }
         });
-    }, {threshold: 0.05});
+    }, { threshold: 0.05 });
 
     sections.forEach(section => {
         section.style.opacity = '0';
@@ -199,4 +200,62 @@ function initialiserLightbox() {
             });
         }
     }
+}
+
+function initialiserTransitions() {
+    // Add fade-in on load
+    setTimeout(() => {
+        document.body.classList.add('fade-in');
+    }, 50);
+
+    // Intercept clicks on links
+    document.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', function (e) {
+            const targetUrl = this.getAttribute('href');
+
+            // Ignore if new tab, hash link, or mailto/tel
+            if (this.target === '_blank' ||
+                targetUrl.startsWith('#') ||
+                targetUrl.startsWith('mailto:') ||
+                targetUrl.startsWith('tel:')) {
+                return;
+            }
+
+            e.preventDefault();
+            document.body.classList.remove('fade-in');
+            document.body.classList.add('fade-out');
+
+            setTimeout(() => {
+                window.location.href = targetUrl;
+            }, 150); // Match CSS transition duration
+        });
+    });
+
+    // Also handle onclick attributes on project cards
+    document.querySelectorAll('.projet-card').forEach(card => {
+        // We need to remove the inline onclick and handle it via listener to allow transition
+        const onclickValue = card.getAttribute('onclick');
+        if (onclickValue) {
+            const urlMatch = onclickValue.match(/window\.location\.href='([^']+)'/);
+            if (urlMatch && urlMatch[1]) {
+                card.removeAttribute('onclick');
+                card.style.cursor = 'pointer';
+                card.addEventListener('click', () => {
+                    document.body.classList.remove('fade-in');
+                    document.body.classList.add('fade-out');
+                    setTimeout(() => {
+                        window.location.href = urlMatch[1];
+                    }, 150);
+                });
+            }
+        }
+    });
+
+    // Handle back button (history)
+    window.addEventListener('pageshow', (event) => {
+        if (event.persisted) {
+            document.body.classList.remove('fade-out');
+            document.body.classList.add('fade-in');
+        }
+    });
 }

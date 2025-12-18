@@ -520,8 +520,12 @@ body.loaded .hero-cta {
     transform: scale(1.02);
 }
 
-.projet-card.featured:hover {
+.projet-card.featured:hover,
+.projet-card:hover {
     transform: translateY(-10px) scale(1.02);
+    box-shadow: var(--ombre-lourde);
+    border-color: var(--rose-primaire);
+    cursor: pointer;
 }
 
 
@@ -796,6 +800,55 @@ body.loaded .hero-cta {
     pointer-events: none;
     transition: opacity 0.3s ease;
     backdrop-filter: blur(5px);
+}
+
+/* Card Indicator Styles */
+.card-indicator {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-primaire);
+    opacity: 0;
+    transform: translateY(10px) rotate(-45deg);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: var(--ombre-moyenne);
+    z-index: 10;
+}
+
+.projet-card:hover .card-indicator {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+}
+
+.card-indicator i {
+    font-size: 1.2rem;
+}
+
+/* Page Transition Styles */
+body {
+    background: var(--degrade-fond);
+    /* Ensure background stays during transition */
+}
+
+body>*:not(.navbar) {
+    transition: opacity 0.15s ease;
+    opacity: 0;
+    /* Default hidden until fade-in */
+}
+
+body.fade-in>*:not(.navbar) {
+    opacity: 1;
+}
+
+body.fade-out>*:not(.navbar) {
+    opacity: 0;
 }
 
 .lightbox.active {

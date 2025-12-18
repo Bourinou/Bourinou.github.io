@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Site de Vote (Demos) - Bourinou</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">Bourinou</span>
+            </div>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a class="nav-link" href="index.html#home">Accueil</a></li>
+                <li><a class="nav-link" href="index.html#about">À propos</a></li>
+                <li><a class="nav-link" href="index.html#skills">Compétences</a></li>
+                <li><a class="nav-link" href="index.html#education">Formation</a></li>
+                <li><a class="nav-link" href="index.html#projet">Projets</a></li>
+                <li><a class="nav-link" href="index.html#interests">Passions</a></li>
+                <li><a class="nav-link" href="index.html#contact">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="projet">
+            <h2 class="section-title">Site de Vote en Ligne (Demos)</h2>
+            <p class="period">2024-2025 (Semestre 3)</p>
+            <div class="about-content">
+                <div class="project-details">
+                    <div class="content-section">
+                        <h3>🗳️ Un Système de Vote Complet</h3>
+                        <p class="about-description">
+                            Ce projet, réalisé en groupe lors du semestre 3 du BUT Informatique, consiste en la création
+                            d'une application web complète de vote en ligne baptisée "Demos".
+                            L'objectif était de concevoir un système permettant aux utilisateurs de créer des questions,
+                            d'y répondre et de consulter les résultats, le tout sécurisé via une authentification.
+                            Nous avons mis un point d'honneur à soigner l'expérience utilisateur avec une interface
+                            claire
+                            et responsive.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>🏗️ Architecture MVC & PHP</h3>
+                        <p class="about-description">
+                            Le cœur de l'application repose sur une architecture MVC (Modèle-Vue-Contrôleur) stricte,
+                            assurant une séparation nette entre la logique métier, l'accès aux données et l'affichage.
+                            Développé en PHP sans framework, ce projet nous a permis de maîtriser les fondamentaux du
+                            développement web dynamique : routage personnalisé, gestion de sessions, et interactions
+                            avec
+                            une base de données MySQL.
+                            Le contrôleur frontal centralise toutes les requêtes, garantissant un code modulaire et
+                            maintenable.
+                        </p>
+                    </div>
+
+                    <div class="content-section">
+                        <h3>👥 Gestion des Utilisateurs et Questions</h3>
+                        <p class="about-description">
+                            L'application gère différents rôles (utilisateurs, organisateurs) et offre des
+                            fonctionnalités
+                            avancées :
+                            inscription et connexion sécurisées, création de questions avec dates de début et fin, et un
+                            système de filtre pour rechercher des votes spécifiques.
+                            La sécurité a été intégrée dès la conception pour protéger les données des utilisateurs et
+                            l'intégrité des votes.
+                        </p>
+                    </div>
+
+                    <ul class="projet-list">
+                        <li>Architecture MVC en PHP natif</li>
+                        <li>Système d'authentification et de gestion de compte</li>
+                        <li>Création, vote et consultation de résultats</li>
+                        <li>Base de données MySQL</li>
+                    </ul>
+                </div>
+
+
+                <div class="project-details" style="align-items: center; margin-top: 2rem;">
+                    <a class="cta-button"
+                        href="https://webinfo.iutmontp.univ-montp2.fr/~cerisierr/demos_dev/web/controleurFrontal.php"
+                        target="_blank">
+                        Voir le site <i class="fas fa-external-link-alt" style="margin-left: 0.5rem;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="tags">
+                <span class="tag">PHP</span>
+                <span class="tag">MVC</span>
+                <span class="tag">MySQL</span>
+                <span class="tag">HTML/CSS</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Dimitri PAPE. Tous droits réservés.</p>
+        </div>
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+
+</html>
