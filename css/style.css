@@ -798,8 +798,9 @@ body.loaded .hero-cta {
     z-index: 2000;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
     backdrop-filter: blur(5px);
+    visibility: hidden;
 }
 
 /* Card Indicator Styles */
@@ -854,6 +855,7 @@ body.fade-out>*:not(.navbar) {
 .lightbox.active {
     opacity: 1;
     pointer-events: all;
+    visibility: visible;
 }
 
 .lightbox img {

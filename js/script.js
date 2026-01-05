@@ -157,7 +157,7 @@ function initialiserLightbox() {
             lightbox.className = 'lightbox';
             lightbox.innerHTML = `
                 <span class="lightbox-close">&times;</span>
-                <img src="" alt="Agrandissement">
+                <img src="" alt="">
             `;
             document.body.appendChild(lightbox);
 

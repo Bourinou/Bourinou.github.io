@@ -6,6 +6,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b876136e-2644-4b31-b0c8-e5fa71aae124" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,6 +45,7 @@
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Bourinou/OneDrive/Desktop/Autres/Pro/Portfolio/Bourinou.github.io&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -85,6 +88,9 @@
       <workItem from="1765684592918" duration="164000" />
       <workItem from="1765725338760" duration="254000" />
       <workItem from="1765761987137" duration="322000" />
+      <workItem from="1766067946691" duration="683000" />
+      <workItem from="1766069674207" duration="41000" />
+      <workItem from="1767641055469" duration="447000" />
     </task>
     <servers />
   </component>
